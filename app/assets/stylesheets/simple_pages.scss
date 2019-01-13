@@ -1,3 +1,112 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #72727E;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.container-fluid {
+  margin: 48px auto;
+  width: 80%;
+  min-height: 800px;
+  padding: 8px;
+  background: #A9AAC1;
+}
+
+.nav-container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  padding-top: 12px;
+  padding-bottom: 6px;
+  padding-left: 8px;
+  background: #E6E7FB;
+  border-bottom: 5px solid black;
+}
+
+nav {
+  width: 80%;
+  margin: 0 auto;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  padding-left: 12px;
+}
+
+nav ul li {
+  text-align: left;
+  display: inline;
+  text-decoration: none;
+}
+
+#first-item {
+  padding-left: 0px;
+}
+
+nav a:link {
+  text-decoration: none;
+}
+
+nav a:visited {
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #72727E;
+}
+
+.my-image {
+  padding-bottom: 24px;
+  width: 80%;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 125%;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 125%;
+}
+
+p, li, footer {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 100%;
+}
+
+h1, h2, p, li, footer, a {
+  color: #2A293C;
+}
+
+h1, footer {
+  text-align: center;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  padding-top: 12px;
+  padding-bottom: 6px;
+  background-color: #E6E7FB;
+  border-top: 5px solid black;
+  min-height: 24px;
+  width: 100%;
+}
