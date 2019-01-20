@@ -1,3 +1,48 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.products-overview {
+  z-index: -1;
+}
+
+.row {
+  z-index: inherit;
+}
+
+a>h2 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.product-display h2, p, strong {
+  padding-bottom: 12px;
+}
+
+.img-fluid {
+  padding-bottom: 12px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #72727E;
+}
+
+a>h2:hover {
+  color: #72727E;
+}
+
+.product-price {
+  width: 100%;
+  text-align: right;
+  padding-top: 8px;
+  border-top: 2px solid black;
+}
