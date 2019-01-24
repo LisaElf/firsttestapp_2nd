@@ -1,4 +1,18 @@
 <div class="container-fluid contact">
-  <h2>Featured Product:</h2>
-  <%= @featured_product.name %>
+  <h1>Featured Product:</h1>
+  <div class="row">
+    <div class="col-sm-3">
+    </div>
+    <div class="col-sm-6">
+      <%= image_tag(@featured_product.image_url, class:"img-fluid") unless @featured_product.image_url.nil? %>
+      <div class="featured-product-describtion">
+        <h2><%= @featured_product.name %></h2>
+        <p><%= @featured_product.description %></p>
+        <p><%= @featured_product.colour %></p>
+        <p>$ <%= @featured_product.price %></p>
+      </div>
+    </div>
+    <div class="col-sm-3">
+    </div>
+  </div><!--end row-->
 </div><!-- end container-fluid-->

@@ -74,6 +74,10 @@ nav a:hover {
   width: 80%;
 }
 
+.featured-product-describtion {
+  text-align: center;
+}
+
 h1 {
   font-size: 32px;
   font-weight: bold;
@@ -86,13 +90,19 @@ h2 {
   line-height: 125%;
 }
 
+h3 {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 125%;
+}
+
 p, li, footer {
   font-size: 16px;
   font-weight: normal;
   line-height: 100%;
 }
 
-h1, h2, p, li, footer, a {
+h1, h2, h3, p, li, footer, a {
   color: #2A293C;
 }
 
