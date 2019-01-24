@@ -13,6 +13,7 @@
 a>h2 {
   text-align: center;
   font-weight: bold;
+  margin-top: 24px;
 }
 
 .product-display h2, p, strong {
@@ -45,4 +46,8 @@ a>h2:hover {
   text-align: right;
   padding-top: 8px;
   border-top: 2px solid black;
+}
+
+.product-edit-back {
+  text-align: right;
 }

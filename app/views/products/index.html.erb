@@ -5,7 +5,7 @@
   <br>
   <div class="row">
     <% @products.each do |product| %>
-      <div class="col-sm products-display">
+      <div class="col-sm-6 products-display">
         <a href="#"><h2><%= product.name %></h2></a>
         <%= image_tag(product.image_url, class:"img-fluid") unless product.image_url.nil? %>
         <p><%= product.description %></p>
@@ -13,6 +13,11 @@
         <p class="product-price"><strong>$ <%= product.price %></strong></p>
       </div><!-- end col-->
     <% end %>
+  </div>
+  <div>
+  <br>
+
+  <%= link_to 'New Product', new_product_path %>
   </div>
 </div>
 
@@ -43,8 +48,3 @@
     <% end %>
   </tbody>
 </table> -->
-
-<br>
-
-
-<%= link_to 'New Product', new_product_path %>
