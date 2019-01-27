@@ -10,8 +10,11 @@
   z-index: inherit;
 }
 
-a>h2 {
+.product-overview-name {
   text-align: center;
+}
+
+h2>a {
   font-weight: bold;
   margin-top: 24px;
 }
@@ -24,20 +27,16 @@ a>h2 {
   padding-bottom: 12px;
 }
 
-a:link {
+h2>a:link {
   text-decoration: none;
 }
 
-a:visited {
+h2>a:visited {
   text-decoration: none;
 }
 
-a:hover {
+h2>a:hover {
   text-decoration: underline;
-  color: #72727E;
-}
-
-a>h2:hover {
   color: #72727E;
 }
 

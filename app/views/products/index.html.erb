@@ -6,7 +6,7 @@
   <div class="row">
     <% @products.each do |product| %>
       <div class="col-sm-6 products-display">
-        <a href="#"><h2><%= product.name %></h2></a>
+        <h2 class="product-overview-name"><%= link_to product.name, product %></h2>
         <%= image_tag(product.image_url, class:"img-fluid") unless product.image_url.nil? %>
         <p><%= product.description %></p>
         <p><%= product.colour %></p>
