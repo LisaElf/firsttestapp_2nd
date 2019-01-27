@@ -74,8 +74,14 @@ nav a:hover {
   width: 80%;
 }
 
-.featured-product-describtion {
+.carousel-inner {
+  width: 60%;
+  margin: 0 auto;
   text-align: center;
+}
+
+.carousel-inner img {
+  width: 100%;
 }
 
 h1 {
@@ -108,6 +114,26 @@ h1, h2, h3, p, li, footer, a {
 
 h1, footer {
   text-align: center;
+}
+
+.carousel-caption>h2,p{
+  text-align: center;
+  line-height: 125%;
+  color: #FFF;
+}
+
+.carousel-caption h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.carousel-caption p {
+  font-size: 24px;
+}
+
+.product-display h2, p {
+  color: #2A293C;
+  text-align: left;
 }
 
 footer {

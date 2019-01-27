@@ -4,16 +4,9 @@
   <h1>Products</h1>
   <br>
   <div class="row">
-    <% @products.each do |product| %>
-      <div class="col-sm-6 products-display">
-        <h2 class="product-overview-name"><%= link_to product.name, product %></h2>
-        <%= image_tag(product.image_url, class:"img-fluid") unless product.image_url.nil? %>
-        <p><%= product.description %></p>
-        <p><%= product.colour %></p>
-        <p class="product-price"><strong>$ <%= product.price %></strong></p>
-      </div><!-- end col-->
-    <% end %>
-  </div>
+    <!-- wenn collection oder @products für Partial genutzt nicht noch Loop benötigt!-->
+      <%= render partial: "product", collection: @products %>
+  </div><!--end row-->
   <div>
   <br>
 
