@@ -116,18 +116,18 @@ h1, footer {
   text-align: center;
 }
 
-.carousel-caption>h2,p{
+.carousel-caption>h2{
   text-align: center;
   line-height: 125%;
   color: #FFF;
-}
-
-.carousel-caption h2 {
   font-size: 32px;
   font-weight: bold;
 }
 
-.carousel-caption p {
+.carousel-caption>p{
+  text-align: center;
+  line-height: 125%;
+  color: #FFF;
   font-size: 24px;
 }
 
