@@ -1,0 +1,10 @@
+<div class="container-fluid">
+  <h2>Order Information</h2>
+  <strong>Order ID: </strong><%= @orders.id %>
+  <br>
+  <strong>Product Name: </strong><%= @orders.product.name %>
+  <br>
+  <strong>Product Price: </strong><%= number_to_currency(@orders.product.price) %>
+  <br>
+  <strong>Total Price: </strong><%= number_to_currency(@orders.total) %>
+</div>
