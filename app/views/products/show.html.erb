@@ -1,13 +1,15 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <p id="notice"><%= notice %></p>
+  <div class="product-detail">
+    <div class="product-image">
+      <%= image_tag(@product.image_url, class:"img-fluid") unless @product.image_url.nil? %>
+    </div>
 
-
-<div class="container-fluid product-detail">
-  <h1><%= @product.name %></h1>
-  <div class="row">
-    <div class="col-sm-4 product-show">
+    <div class="product-show">
+      <h2><%= @product.name %></h2>
       <p>
         <strong>Description:</strong>
-        <br>
+      <br>
         <%= @product.description %>
       </p>
       <p>
@@ -21,13 +23,11 @@
         $ <%= @product.price %>
       </p>
     </div>
-    <div class="col-sm-8 product-image">
-      <%= image_tag(@product.image_url, class:"img-fluid") unless @product.image_url.nil? %>
-    </div>
-  </div><!--end row-->
-  <div class="product-edit-back">
-    <br>
-  <%= link_to 'Edit', edit_product_path(@product) %> |
-  <%= link_to 'Back', products_path %>
   </div>
+
+  <div class="product-edit-back-show">
+    <button class="back-button"><%= link_to 'Back', products_path %></button>
+    <button class="edit-product-button"><%= link_to 'Edit', edit_product_path(@product) %></button>
+  </div>
+
 </div>

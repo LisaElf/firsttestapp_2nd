@@ -1,14 +1,34 @@
-<div class="container-fluid">
-  <div class="row">
-    <% @orders.each do |order| %>
-      <div class="col-sm">
-        <h1>
-          Order #<%= order.id %>:
-          <%= link_to order.product.name, order %>
-        </h1>
-        <p><%= order.product.description %></p>
-        <strong>$<%= order.product.price %></strong>
-      </div><!--end col-->
-    <% end %>
+<div class="container-fluid order-index">
+  <div class="order-table">
+    <table >
+      <thead>
+        <tr>
+          <th>Order #</th>
+          <th>User ID</th>
+          <th>Product Name</th>
+          <th>Product Price</th>
+          <th>Total Cost</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @orders.each do |order| %>
+          <tr>
+            <td><%= link_to order.id, order %></td>
+            <td><%= order.user_id %></td>
+            <td><%= link_to order.product.name, "#{products_path}/#{order.product.id}" %>
+            </td>
+            <td>$ <%= order.product.price %></td>
+            <td>$ <%= order.total %></td>
+          </tr>
+        <% end %>
+      </tbody>
+
+    </table>
   </div>
+
+  <div class="order-information">
+    <p>Click on an Order # to see order details. Click on a Product Name to see the product.</p>
+  </div>
+
 </div>

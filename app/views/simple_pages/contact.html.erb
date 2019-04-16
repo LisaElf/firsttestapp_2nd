@@ -1,15 +1,55 @@
 
 <div class="container-fluid contact">
-  <h1>Contact Information</h1>
+  <h2>Contact Information</h2>
 
-  <div>
-    <p>In case, you would like to contact us please find our contact information:</p>
-    <ul>
-      <li>Adress:<br>Example Street<br>Example City</li>
-      <br>
-      <li>Email:<br>example@example.example</li>
-      <br>
-      <li>Telefon:<br>0000000</li>
-    </ul>
+  <div class="contact-overview flex-container">
+    <div class="contact-info">
+      <h3>We Love to Hear From You</h3>
+      <ul>
+        <li>
+          <strong>Email:</strong>
+          <br/>
+          <br/>
+          example@example.example
+        </li>
+        <br />
+        <li>
+          <strong>Telefon:</strong>
+          <br />
+          <br />
+          0000000000
+        </li>
+      </ul>
+      <br />
+      <h3>Drop Us A Line</h3>
+      <form class="form-group">
+        <label for="name">
+          <span>Name</span>
+          <br />
+          <input class="form-control" type="text" name="name" placeholder="Martina Mustermann" required>
+        </label>
+        <br />
+        <label for="email">
+          <span>E-mail</span>
+          <br />
+          <input class="form-control" type="email" name="email" placeholder="name@email.com" required>
+        </label>
+        <br />
+        <br />
+        <label for="message">
+          <span>Your Message</span>
+          <br />
+          <textarea  class="form-control" type="text" placeholder="Hi Bike-Team..." required></textarea>
+        </label>
+        <br />
+        <input class="submit-contact-button" type="submit" value="Send">
+
+      </form>
+
+
+    </div>
+    <div class="contact-location">
+      <iframe width="400" height="600" id="gmap_canvas" src="https://maps.google.com/maps?q=berlin&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+    </div>
   </div>
 </div><!-- end container-fluid-->

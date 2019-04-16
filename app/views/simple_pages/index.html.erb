@@ -1,11 +1,84 @@
 <div class="container-fluid index">
-  <h1>Welcome to Bike Berlin</h1>
-  <h2>Your source for used bikes in Berlin.</h2>
-  <div class="product-images">
-    <p>We offer a variety of bikes at a decent price:</p>
-    <ul>
-      <li><p>Example 1</p><%= image_tag("bike1.jpeg", class:"img-responsive my-image") %></li>
-      <li><p>Example 2</p><%= image_tag("bike2.jpeg", class:"img-responsive my-image") %></li>
-    </ul>
-  </div><!--end product-images-->
+  <h2>More Than Bikes<br>Full Service & a Great Selection Provided by Experts</h2>
+
+
+  <div class="overview-products flex-container">
+    <div>
+      <div class="overview-products-icon">
+        <%= link_to products_path do %>
+          <%= image_tag("Bicycle-2-icon.png", class:"img-responsive") %>
+        <% end %>
+        <p><strong><%= link_to "Bicycles", products_path %></strong><br>Find the right bike for you.</p>
+      </div>
+    </div>
+    <div>
+      <div class="overview-products-icon">
+        <%= link_to products_path do %>
+          <%= image_tag("T-Shirt-icon.png", class:"img-responsive") %>
+        <% end %>
+        <p><strong><%= link_to "Gear", products_path %></strong><br> We offer a variety of jerseys, helmets and so on.</p>
+      </div>
+    </div>
+    <div>
+      <div class="overview-products-icon">
+        <%= link_to products_path do %>
+          <%= image_tag("Repair-icon.png", class:"img-responsive") %>
+        <% end %>
+        <p><strong><%= link_to "Services", products_path %></strong><br>Let us keep your bicycle in top shape.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="overview-bikes">
+    <h2>Bicycles</h2>
+    <h3>Your Source for Used Bikes in Berlin</h3>
+    <div>
+      <%= image_tag("bike1.jpeg", class:"img-responsive my-image bike-img") %>
+      <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+      <br>
+      <p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    </div>
+  </div>
+
+  <div class="overview-gear">
+    <h2>Gear</h2>
+    <h3>Everything You Need for a Bike Ride</h3>
+    <div>
+      <%= image_tag("bike2.jpeg", class:"img-responsive my-image gear-img") %>
+      <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+      <br>
+      <p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    </div>
+  </div>
+
+  <div class="overview-services">
+    <h2>Services</h2>
+    <h3>Our Services at a Glance</h3>
+    <table class="services-examples">
+      <tr>
+        <th>Service</th>
+        <th>Description</th>
+        <th>Price</th>
+      </tr>
+
+      <tr>
+        <td>Flat Repair</td>
+        <td>Replace and refill tube</td>
+        <td>30$</td>
+      </tr>
+
+      <tr>
+        <td>Brake Adjustment</td>
+        <td>Tension adjustment and tune-up</td>
+        <td>20$ each</td>
+      </tr>
+
+      <tr>
+        <td>Wheel True</td>
+        <td>Spoke adjustment and straightening</td>
+        <td>35$</td>
+      </tr>
+    </table>
+  </div>
+
 </div><!--end container-fluid-->

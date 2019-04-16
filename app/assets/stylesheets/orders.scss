@@ -1,0 +1,39 @@
+// Order Index Page
+.order-table table {
+  width: 100%;
+  margin: 0 auto;
+  float: left;
+}
+
+.order-table th, td {
+  padding: 8px;
+}
+
+.order-table > table, th, td {
+  border: 1px solid #505D73;
+}
+
+.order-table th, td {
+  text-align: center;
+  border: 1px solid #505D73;
+}
+
+.order-information {
+  display: block;
+  clear: left;
+  float: left;
+  margin-top: 48px;
+}
+
+@media only screen and (max-width: 600px) {
+  .order-index {
+    margin: 16 auto;
+    padding: 0!important;
+  }
+
+  .order-table td, th {
+    padding: 4px;
+  }
+}
+
+// Order Show Page

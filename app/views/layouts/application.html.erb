@@ -20,15 +20,33 @@
           <li id="first-item"><%= link_to "Home", root_path %></li>
           <li><%= link_to "About", simple_pages_about_path %></li>
           <li><%= link_to "Contact", simple_pages_contact_path %></li>
-          <li><%= link_to "Products", products_path %></li>
+          <div class="dropdown">
+            <button class="dropdown-button">Products
+            </button>
+            <div class="dropdown-content">
+              <%= link_to "Bikes", products_path %>
+              <%= link_to "Gear", products_path %>
+              <%= link_to "Services", products_path %>
+            </div>
+          </div>
+          <li><%= link_to "Orders", orders_path %>
         </ul>
       </nav>
     </div><!--end nav-container-->
+    <header>
+      <div class="store-icon">
+        <%= link_to root_path do %>
+          <%= image_tag "bike-icon.png" %>
+        <% end %>
+        <h1>Lisa's Test Bike Shop</h1>
+      </div>
+
+    </header>
 
     <%= yield %>
 
     <footer>
-      &copy; 2019 Bike Berlin
+      &copy; 2019 Lisa's Test Bike Shop
     </footer>
   </body>
 </html>

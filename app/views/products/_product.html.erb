@@ -1,7 +1,9 @@
 <div class="col-sm-6 products-display">
+  <%= link_to image_tag(product.image_url, class:"img-fluid"), product unless product.image_url.nil? %>
   <h2 class="product-overview-name"><%= link_to product.name, product %></h2>
-  <%= image_tag(product.image_url, class:"img-fluid") unless product.image_url.nil? %>
-  <p><%= product.description %></p>
-  <p><%= product.colour %></p>
-  <p class="product-price"><strong>$ <%= product.price %></strong></p>
+  <p class="product-desc"><%= product.description %></p>
+  <p class="product-price">$ <%= product.price %></p>
+  <p class="product-color">Colour: <%= product.colour %></p>
+
+  <!-- link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %-->
 </div><!-- end col-->

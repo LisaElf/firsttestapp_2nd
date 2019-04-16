@@ -1,5 +1,30 @@
-<div class="container-fluid">
-  <h2>Order Information</h2>
+<p id="notice"><%= notice %></p>
+<div class="container-fluid order">
+  <div class="order-table">
+    <h2>Order Information</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Order #</th>
+          <th>Product Name</th>
+          <th>Product Price</th>
+          <th>Total Price</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td><%= @orders.id %></td>
+          <td><%= @orders.product.name %></td>
+          <td><%= number_to_currency(@orders.product.price) %></td>
+          <td><%= number_to_currency(@orders.total) %></td>
+        </tr>
+      <tbody>
+
+    </table>
+  </div>
+
+
   <strong>Order ID: </strong><%= @orders.id %>
   <br>
   <strong>Product Name: </strong><%= @orders.product.name %>

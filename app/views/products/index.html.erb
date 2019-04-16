@@ -1,16 +1,50 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid products-intro">
+  <p id="notice"><%= notice %></p>
+  <h1>Bikes</h1>
+  <h2>Our current special offers:</h2>
+</div>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol><!--end carousel-indicators-->
+  <div class="carousel-inner">
+    <% @products.each do |product| %>
+      <div class="carousel-item<%= " active" if product == @products.first%>">
+        <%= link_to image_tag(product.image_url, class:"image-fluid"), product unless product.image_url.nil? %>
+        <div class="carousel-caption d-none d-md-block">
+          <h2><%= product.name %></h2>
+          <p>
+            <%= product.description %>
+          </br>
+            $ <%= product.price %>
+          </p>
+        </div><!--end carousel-caption-->
+      </div><!--end carousel-item-->
+      <% end %>
+    <!--/div><end carousel-item active-->
+  </div><!--end carousel-inner-->
+
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div><!--end carouselExampleIndicators-->
 
 <div class="container-fluid products-overview">
-  <h1>Products</h1>
-  <br>
-  <div class="row">
-    <!-- wenn collection oder @products für Partial genutzt nicht noch Loop benötigt!-->
-      <%= render partial: "product", collection: @products %>
-  </div><!--end row-->
   <div>
-  <br>
-
-  <%= link_to 'New Product', new_product_path %>
+    <h2>Find your new Bike</h2>
+    <h3>We offer a variety of bikes - City Bikes, Racing Bikes, Mountain Bikes and Bicycles for Kids. <br />Find all our bikes below!</h3>
+    <button class="new-product-button"><%= link_to 'New Product', new_product_path %></button>
+    <div class="row">
+      <!-- wenn collection oder @products für Partial genutzt nicht noch Loop benötigt!-->
+        <%= render partial: "product", collection: @products %>
+      </div><!--end row-->
   </div>
 </div>
 

@@ -1,5 +1,9 @@
-<h1>New Product</h1>
+<div class="container-fluid">
+  <h1>Create a New Bike Product</h1>
 
-<%= render 'form', product: @product %>
+  <%= render 'form', product: @product %>
 
-<%= link_to 'Back', products_path %>
+  <div class="product-edit-back-show">
+    <button class="back-button"><%= link_to 'Back', products_path %></button>
+  </div>
+</div>

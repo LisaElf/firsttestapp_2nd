@@ -2,12 +2,51 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#notice {
+  text-align: center;
+}
+
+//PRODUCT INDEX PAGE
+.carousel-control-prev-icon {
+  height: 40px;
+  width: 40px;
+}
+.carousel-control-next-icon {
+  height: 40px;
+  width: 40px;
+}
+
+.carousel-control-prev-icon {
+ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23506E73' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23506E73' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
 .products-overview {
-  z-index: -1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .row {
-  z-index: inherit;
+  clear: right;
+    margin: 32px auto;
+}
+
+.new-product-button {
+  display: block;
+  padding: 8px;
+  margin: 32px 15px;
+  float: right;
+  border-radius: 8px;
+  background-color: #506E73;
+}
+
+.new-product-button a {
+    color: #fffff2;
+    font-weight: bolder;
 }
 
 .product-overview-name {
@@ -19,34 +58,130 @@ h2>a {
   margin-top: 24px;
 }
 
-.product-display h2, p, strong {
-  padding-bottom: 12px;
-}
+// .product-displays > h2, p, strong {
+//   padding-bottom: 12px;
+// }
 
 .img-fluid {
   padding-bottom: 12px;
 }
 
-h2>a:link {
-  text-decoration: none;
-}
+// h2>a:link {
+//   text-decoration: none;
+// }
+//
+// h2>a:visited {
+//   text-decoration: none;
+// }
 
-h2>a:visited {
-  text-decoration: none;
-}
-
-h2>a:hover {
-  text-decoration: underline;
-  color: #72727E;
+// h2>a:hover {
+//   text-decoration: underline;
+//   color: #72727E;
+// }
+.product-desc {
+  display: inline;
+  float: left;
+  padding: 0;
 }
 
 .product-price {
-  width: 100%;
-  text-align: right;
-  padding-top: 8px;
-  border-top: 2px solid black;
+  float: right;
+  padding: 0;
+  font-weight: bolder;
 }
 
-.product-edit-back {
-  text-align: right;
+.product-color {
+  clear: both;
+  font-size: 14px;
+  margin-bottom: 48px;
+}
+
+
+//PRODUCT SHOW PAGE
+.product-detail {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 32px auto;
+}
+
+.product-image {
+  display: inline;
+  max-width: 60%;
+  margin: 0 16px;
+}
+
+.product-show {
+  display: inline;
+}
+
+.product-show h2 {
+  text-align: left;
+  font-weight: bolder;
+}
+
+.product-edit-back-show {
+  display: block;
+  clear: both;
+}
+
+.back-button {
+  clear: both;
+  //float: left;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #506E73;
+  border: none;
+}
+
+.back-button a {
+  color: #fffff2;
+  font-weight: bolder;
+}
+
+.edit-product-button {
+  float: right;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #506E73;
+  border: none;
+}
+
+.edit-product-button a {
+  color: #fffff2;
+  font-weight: bolder;
+}
+
+//NEW BIKE PRODUCT FORM
+.form-group label {
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+.submit-button {
+  margin-top: 32px;
+  margin-bottom: 48px;
+}
+.submit-button input {
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #506E73;
+  color: #fffff2;
+  font-weight: bolder;
+  border: none;
+}
+
+// EDIT BIKE PRODUCT FORM
+.show-button {
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #506E73;
+  font-weight: bolder;
+  border: none;
+  float: right;
+}
+
+.show-button a {
+  color: #fffff2;
 }
