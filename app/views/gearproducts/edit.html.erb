@@ -1,0 +1,10 @@
+<div class="container-fluid">
+  <h1>Editing Gearproduct</h1>
+
+  <%= render 'form', gearproduct: @gearproduct %>
+
+  <div class="product-edit-back-show">
+    <button class="back-button"><%= link_to 'Back', gearproducts_path %></button>
+    <button class="show-button"><%= link_to 'Show', @gearproduct %></button>
+  </div>
+</div>

@@ -13,24 +13,24 @@
     </div>
     <div>
       <div class="overview-products-icon">
-        <%= link_to products_path do %>
+        <%= link_to gearproducts_path do %>
           <%= image_tag("T-Shirt-icon.png", class:"img-responsive") %>
         <% end %>
-        <p><strong><%= link_to "Gear", products_path %></strong><br> We offer a variety of jerseys, helmets and so on.</p>
+        <p><strong><%= link_to "Gear", gearproducts_path %></strong><br> We offer a variety of jerseys, helmets and so on.</p>
       </div>
     </div>
     <div>
       <div class="overview-products-icon">
-        <%= link_to products_path do %>
+        <%= link_to simple_pages_service_path do %>
           <%= image_tag("Repair-icon.png", class:"img-responsive") %>
         <% end %>
-        <p><strong><%= link_to "Services", products_path %></strong><br>Let us keep your bicycle in top shape.</p>
+        <p><strong><%= link_to "Services", simple_pages_service_path %></strong><br>Let us keep your bicycle in top shape.</p>
       </div>
     </div>
   </div>
 
   <div class="overview-bikes">
-    <h2>Bicycles</h2>
+    <h2><%= link_to "Bicycles", products_path %></h2>
     <h3>Your Source for Used Bikes in Berlin</h3>
     <div>
       <%= image_tag("bike1.jpeg", class:"img-responsive my-image bike-img") %>
@@ -40,8 +40,10 @@
     </div>
   </div>
 
+</br>
+
   <div class="overview-gear">
-    <h2>Gear</h2>
+    <h2><%=link_to "Gear", gearproducts_path %></h2>
     <h3>Everything You Need for a Bike Ride</h3>
     <div>
       <%= image_tag("bike2.jpeg", class:"img-responsive my-image gear-img") %>
@@ -51,8 +53,10 @@
     </div>
   </div>
 
+</br>
+
   <div class="overview-services">
-    <h2>Services</h2>
+    <h2><%= link_to "Services", simple_pages_service_path %></h2> <!-- hier simple page erstellen und ersetzen -->
     <h3>Our Services at a Glance</h3>
     <table class="services-examples">
       <tr>

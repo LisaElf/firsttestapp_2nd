@@ -1,0 +1,2 @@
+class Gearproduct < ApplicationRecord
+end

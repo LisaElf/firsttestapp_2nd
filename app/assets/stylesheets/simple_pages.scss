@@ -1,13 +1,20 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body {
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background: #FFF;
   font-family: Helvetica, Arial, sans-serif;
 }
+
+.container-fluid {
+  min-height: 100%;
+  position: relative;
+}
+
 
 //NAVIGATIOM
 .nav-container {
@@ -219,6 +226,7 @@ header {
 }
 
 .overview-gear {
+  clear: left;
   margin-bottom: 32px;
 }
 
@@ -237,6 +245,10 @@ header {
 .overview-gear p {
   display: inline;
   margin: 16px;
+}
+
+.overview-services {
+  clear: right;
 }
 
 .overview-services table {
@@ -270,9 +282,6 @@ header {
 }
 
 // ABOUT_PAGE
-.about {
-  min-height: 800px;
-}
 .about h3 {
   text-align: left;
 }
@@ -292,10 +301,6 @@ header {
 }
 
 // CONTACT_PAGE
-.contact {
-  min-height: 800px;
-}
-
 .contact-overview {
   display: flex;
   flex-direction: row;
@@ -382,7 +387,10 @@ textarea:focus {
   }
 }
 
-
+//service
+.service p{
+  display: inline;
+}
 
 #carouselExampleIndicators {
   margin-top: 80px;

@@ -1,11 +1,14 @@
-<p id="notice"><%= notice %></p>
 <div class="container-fluid order">
-  <div class="order-table">
+  <p id="notice"><%= notice %></p>
+  <!--div class="order-table"-->
     <h2>Order Information</h2>
+  </br>
+  <div class="order-table">
     <table>
       <thead>
         <tr>
           <th>Order #</th>
+          <th>User ID</th>
           <th>Product Name</th>
           <th>Product Price</th>
           <th>Total Price</th>
@@ -15,21 +18,19 @@
       <tbody>
         <tr>
           <td><%= @orders.id %></td>
+          <td><%= @orders.user_id %></td>
           <td><%= @orders.product.name %></td>
           <td><%= number_to_currency(@orders.product.price) %></td>
           <td><%= number_to_currency(@orders.total) %></td>
         </tr>
-      <tbody>
+      </tbody>
 
     </table>
   </div>
+</br>
 
+<div class="product-edit-back-show">
+  <button class="back-button"><%= link_to 'Back', orders_path %></button>
+</div>
 
-  <strong>Order ID: </strong><%= @orders.id %>
-  <br>
-  <strong>Product Name: </strong><%= @orders.product.name %>
-  <br>
-  <strong>Product Price: </strong><%= number_to_currency(@orders.product.price) %>
-  <br>
-  <strong>Total Price: </strong><%= number_to_currency(@orders.total) %>
 </div>

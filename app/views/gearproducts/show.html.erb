@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <p id="notice"><%= notice %></p>
+  <div class="product-detail">
+    <div class="product-image">
+      <%= image_tag(@gearproduct.image_url, class:"img-fluid") unless @gearproduct.image_url.nil? %>
+    </div>
+
+    <div class="product-show">
+      <h2><%= @gearproduct.name %></h2>
+      <p>
+        <strong>Description:</strong>
+      <br>
+        <%= @gearproduct.description %>
+      </p>
+      <p>
+        <strong>Gear Type:</strong>
+        <br>
+        <%= @gearproduct.gear_type %>
+      </p>
+    </div>
+  </div>
+
+  <div class="product-edit-back-show">
+    <button class="back-button"><%= link_to 'Back', gearproducts_path %></button>
+    <button class="edit-product-button"><%= link_to 'Edit', edit_gearproduct_path(@gearproduct) %></button>
+  </div>
+
+</div>
