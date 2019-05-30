@@ -2,6 +2,6 @@
   <%= link_to image_tag(gearproduct.image_url, class:"img-fluid"), gearproduct unless gearproduct.image_url.nil? %>
   <h2 class="gearproduct-overview-name"><%= link_to gearproduct.name, gearproduct %></h2>
   <p class="gearproduct-desc"><%= gearproduct.description %></p>
-  <p class="gearproduct-gear_type">Colour: <%= gearproduct.gear_type %></p>
+  <p class="gearproduct-gear_type">Gear Type: <%= gearproduct.gear_type %></p>
   <!-- link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %-->
 </div><!-- end col-->
