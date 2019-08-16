@@ -29,7 +29,16 @@
               <%= link_to "Services", simple_pages_service_path %>
             </div>
           </div>
-          <li><%= link_to "Orders", orders_path %>
+          <li><%= link_to "Orders", orders_path %></li>
+          <div id="search">
+          <li><%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+                <%= form.label :q, 'Search for:', class:"search-label" %>
+                <%= form.text_field :q, id: 'q', value: params[:q], class:"form-control-sm search-field" %>
+                <%= form.submit 'Search', class:"search-submit" %>
+              <% end %>
+          </li>
+        </div>
+
         </ul>
       </nav>
     </div><!--end nav-container-->
