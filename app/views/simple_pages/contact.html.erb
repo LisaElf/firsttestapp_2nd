@@ -22,32 +22,26 @@
       </ul>
       <br />
       <h3>Drop Us A Line</h3>
-      <form class="form-group">
-        <label for="name">
-          <span>Name</span>
-          <br />
-          <input class="form-control" type="text" name="name" placeholder="Martina Mustermann" required>
-        </label>
-        <br />
-        <label for="email">
-          <span>E-mail</span>
-          <br />
-          <input class="form-control" type="email" name="email" placeholder="name@email.com" required>
-        </label>
-        <br />
-        <br />
-        <label for="message">
-          <span>Your Message</span>
-          <br />
-          <textarea  class="form-control" type="text" placeholder="Hi Bike-Team..." required></textarea>
-        </label>
-        <br />
-        <input class="submit-contact-button" type="submit" value="Send">
-
-      </form>
-
-
+      <%= flash[:notice] %>
+      <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
+      <div class="row">
+        <div class="form-group">
+          <%= form.label :name %>
+          <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
+        </div>
+        <div class="form-group">
+          <%= form.label :email %>
+          <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
+        </div>
+        <div class="form-group">
+          <%= form.label :message %>
+          <%= form.text_area :message, class: "form-control", placeholder: "Enter Message here", rows: 5 %>
+        </div>
+      </div>
+      <%= form.submit "Send", class: "form_label submit-contact-button" %>
+      <% end %>
     </div>
+
     <div class="contact-location">
       <iframe width="400" height="600" id="gmap_canvas" src="https://maps.google.com/maps?q=berlin&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
     </div>
