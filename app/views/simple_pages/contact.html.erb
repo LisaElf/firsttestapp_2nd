@@ -24,18 +24,22 @@
       <h3>Drop Us A Line</h3>
       <%= flash[:notice] %>
       <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
-      <div class="row">
-        <div class="form-group">
+      <div class="row" id="contact-form-row">
+        <div class="form-group col-md-6">
           <%= form.label :name %>
-          <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
+          <p>
+          <%= form.text_field :name, class: "form-control", placeholder: "Enter Name", required:"required" %>
+          </p>
         </div>
-        <div class="form-group">
+        <div class="form-group col-md-6">
           <%= form.label :email %>
-          <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
+          <p>
+          <%= form.text_field :email, class: "form-control", placeholder: "Enter Email", type:"email", validates:"email", required:"required" %>
+          </p>
         </div>
-        <div class="form-group">
+        <div class="form-group col-md-12">
           <%= form.label :message %>
-          <%= form.text_area :message, class: "form-control", placeholder: "Enter Message here", rows: 5 %>
+          <%= form.text_area :message, class: "form-control", placeholder: "Enter Message here", rows: 5, required:"required" %>
         </div>
       </div>
       <%= form.submit "Send", class: "form_label submit-contact-button" %>

@@ -372,7 +372,21 @@ textarea:focus {
 }
 
 .contact-info .form-control {
-  width: 320px;
+  width: 240px;
+}
+
+#contact-form-row {
+  display: block;
+}
+
+.form-group.col-md-6 {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.form-group.col-md-12 {
+  padding-right: 0px;
+  padding-left: 0px;
 }
 
 .submit-contact-button {
