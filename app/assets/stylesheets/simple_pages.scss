@@ -107,13 +107,17 @@ nav ul li {
   background-color: #505D73;
 }
 
+.nav-link {
+  padding: 0;
+}
+
 .search-form {
   padding: 0;
 }
 
 #nav-search-form {
+  clear: right;
   float: right;
-  //text-align: right;
 }
 
 .search-label {
