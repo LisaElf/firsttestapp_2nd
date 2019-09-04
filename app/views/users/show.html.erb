@@ -1,14 +1,28 @@
-<p id="notice"><%= notice %></p>
+<div class="container fluid">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
+  <h2>User Information</h2>
+  <br />
+  <div class="users-table">
+    <table>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+        </tr>
+      </thead>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
+      <tbody>
+        <tr class="user-cell">
+          <td><%= @user.first_name %></td>
+          <td><%= @user.last_name %></td>
+        </tr>
+      </tbody>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+    </table>
+  </div>
+
+  <button class="user-show-page-button back-button"><%= link_to 'Edit', edit_user_path(@user) %></button>
+  <button class="user-show-page-button back-button"><%= link_to 'Back', users_path %></button>
+  <br />
+</div>

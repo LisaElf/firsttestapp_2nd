@@ -1,3 +1,68 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// Signup Page / kann das nciht auch in simple_pages.scss??
+.submit-button {
+  margin-top: 32px;
+  margin-bottom: 48px;
+}
+
+.submit-button input {
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #506E73;
+  color: #fffff2;
+  font-weight: bolder;
+  border: none;
+}
+
+.submit-button a {
+  margin-bottom: 16px;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #506E73;
+  color: #fffff2;
+  font-weight: bolder;
+  border: none;
+}
+
+// Users Index Page
+.users-table table {
+  width: 100%;
+  margin: 20px auto;
+  float: left;
+}
+
+.users-table th, td {
+  padding: 8px;
+}
+
+.users-table > table, th, td {
+  border: 1px solid #505D73;
+}
+
+.users-table th, td {
+  text-align: center;
+  border: 1px solid #505D73;
+}
+
+@media only screen and (max-width: 600px) {
+  .users-index {
+    margin: 16 auto;
+    padding: 0!important;
+  }
+
+  .users-table td, th {
+    padding: 4px;
+  }
+}
+
+//User Show page
+.user-cell {
+  height: 41px;
+}
+.user-show-page-button {
+  margin-bottom: 48px;
+}

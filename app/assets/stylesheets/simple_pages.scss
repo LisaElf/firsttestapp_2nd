@@ -291,7 +291,7 @@ header {
 
 .overview-services td, th {
   padding: 8px;
-  border: none;
+
   text-align: left;
 }
 
@@ -535,4 +535,10 @@ footer {
   min-height: 24px;
   width: 100%;
   color: #fffff2;
+}
+
+//devise views
+.password-info {
+  font-size: 14px;
+  color: #505D73;
 }
