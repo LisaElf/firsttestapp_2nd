@@ -62,10 +62,16 @@
       </div>
 
     </header>
-    <div class="notice"><%= notice %></div>
-    <div class="alert"><%= alert %></div>
+    <div class="container-fluid lisa">
+      <% if notice %>
+        <div id="notice" class="notice alert-light"><%= notice %></div>
+      <% end %>
+      <% if alert %>
+        <div id="alert" class="alert alert-light" role="alert"><%= alert %></div>
+      <% end %>
 
-    <%= yield %>
+      <%= yield %>
+    </div>
 
     <footer>
       &copy; 2019 Lisa's Test Bike Shop

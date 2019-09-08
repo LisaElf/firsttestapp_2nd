@@ -1,5 +1,13 @@
 class OrdersController < ApplicationController
-  before_action :authenticate_user!, :set_order, only: [:show, :edit, :update, :destroy]
+  before_action :set_order, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index]
+  load_and_authorize_resource
+
+  #rescuing and redirecting users in case they are not authorized
+    rescue_from CanCan::AccessDenied do |exception|
+      redirect_to main_app.root_url, alert: exception.message
+    end
+
   def index
     @orders = Order.includes(:product).all
   end

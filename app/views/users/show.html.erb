@@ -1,28 +1,32 @@
-<div class="container fluid">
-  <p id="notice"><%= notice %></p>
+  <h2 class="user">User Information</h2>
+  <div class="row">
+    <div class="col-6">
+      <div>
+        <div><strong>First Name</strong></div>
+        <div><%= @user.first_name %></div>
+      </div>
 
-  <h2>User Information</h2>
-  <br />
-  <div class="users-table">
-    <table>
-      <thead>
-        <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-        </tr>
-      </thead>
+      <br/>
 
-      <tbody>
-        <tr class="user-cell">
-          <td><%= @user.first_name %></td>
-          <td><%= @user.last_name %></td>
-        </tr>
-      </tbody>
+      <div>
+        <div><strong>Last Name</strong></div>
+        <div><%= @user.last_name %></div>
+      </div>
 
-    </table>
+      <br/>
+
+      <div>
+        <div><strong>E-mail</strong></div>
+        <div><%= @user.email %></div>
+      </div>
+
+      <br/>
+      <button class="user-show-page-button back-button"><%= link_to 'Edit Your Information', edit_user_path(@user) %></button>
+      <button class="user-show-page-button back-button"><%= link_to 'Back', users_path %></button>
+      <br />
+    </div>
+
+    <div class="col">
+      <button class="user-show-page-button back-button"><%= link_to "Change your password", edit_user_registration_path %></button>
+    </div>
   </div>
-
-  <button class="user-show-page-button back-button"><%= link_to 'Edit', edit_user_path(@user) %></button>
-  <button class="user-show-page-button back-button"><%= link_to 'Back', users_path %></button>
-  <br />
-</div>
