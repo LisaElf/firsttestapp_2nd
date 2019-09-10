@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
   has_many :orders
+  has_many :comments
 
   def self.search(search_term)
     if Rails.env.development?
@@ -8,4 +9,13 @@ class Product < ApplicationRecord
       Product.where("name ilike ?", "%#{search_term}%")
     end
   end
+
+  def highest_rating_comment
+    comments.star_rating_desc.all
+  end
+
+  def lowest_rating_comment
+    comments.star_rating_ascending.first
+  end
+
 end
