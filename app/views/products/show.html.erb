@@ -1,32 +1,31 @@
-<div class="container-fluid">
-  <div class="product-detail">
-    <div class="product-image">
+  <h2><%= @product.name %></h2>
+  <div class="product-detail row">
+
+    <div class="product-image col-6">
       <%= image_tag(@product.image_url, class:"img-fluid") unless @product.image_url.nil? %>
     </div>
 
-    <div class="product-show">
-      <h2><%= @product.name %></h2>
-      <p>
-        <strong>Description:</strong>
-      <br>
-        <%= @product.description %>
-      </p>
-      <p>
-        <strong>Colour:</strong>
-        <br>
-        <%= @product.colour %>
-      </p>
-      <p>
-        <strong>Price:</strong>
-        <br>
-        $ <%= @product.price %>
-      </p>
+    <div class="product-show col-4">
+      <div>
+        <p><strong>Description:</strong> <%= @product.description %></p>
+      </div>
+      <div>
+        <p><strong>Colour:</strong> <%= @product.colour %></p>
+      </div>
+      <div>
+        <p><strong>Price:</strong> $<%= @product.price %></p>
+      </div>
     </div>
   </div>
 
-  <div class="product-edit-back-show">
-    <button class="back-button"><%= link_to 'Back', products_path %></button>
-    <button class="edit-product-button"><%= link_to 'Edit', edit_product_path(@product) %></button>
+  <div class="user-comments row">
+  </div>
+
+  <div class="product-edit-back-show row">
+    <div class="col-12">
+      <button class="back-button"><%= link_to 'Back', products_path %></button>
+      <button class="edit-product-button"><%= link_to 'Edit', edit_product_path(@product) %></button>
+    </div>
   </div>
 
 </div>

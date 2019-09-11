@@ -31,8 +31,8 @@
 }
 
 .row {
-  clear: right;
-    margin: 32px auto;
+  clear: all;
+  margin: 32px auto;
 }
 
 .new-product-button {
@@ -98,13 +98,13 @@ h2>a {
 
 
 //PRODUCT SHOW PAGE
-.product-detail {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 32px auto;
-}
+// .product-detail {
+//   display: flex;
+//   justify-content: space-around;
+//   flex-direction: row;
+//   flex-wrap: wrap;
+//   margin: 32px auto;
+// }
 
 .product-image {
   display: inline;
