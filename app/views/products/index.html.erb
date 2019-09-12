@@ -38,16 +38,16 @@
   </a>
 </div><!--end carouselExampleIndicators-->
 
-<div class="container-fluid products-overview">
+<div class="container-fluid">
   <div>
     <h2>Find your new Bike</h2>
     <h3>We offer a variety of bikes - City Bikes, Racing Bikes, Mountain Bikes and Bicycles for Kids. <br />Find all our bikes below!</h3>
     <button class="new-product-button"><%= link_to 'New Product', new_product_path %></button>
-    <div class="row">
-      <!-- wenn collection oder @products für Partial genutzt nicht noch Loop benötigt!-->
-        <%= render partial: "product", collection: @products %>
-      </div><!--end row-->
   </div>
+  <div class="row  products-overview">
+    <!-- wenn collection oder @products für Partial genutzt nicht noch Loop benötigt!-->
+    <%= render partial: "product", collection: @products %>
+  </div><!--end row-->
 </div>
 
 <!-- <table> -->

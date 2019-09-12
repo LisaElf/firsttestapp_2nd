@@ -1,27 +1,22 @@
-<div class="container-fluid">
-  <div class="product-detail">
-    <div class="product-image">
+<h2><%= @gearproduct.name %></h2>
+  <div class="product-detail row">
+    <div class="product-image col-6">
       <%= image_tag(@gearproduct.image_url, class:"img-fluid") unless @gearproduct.image_url.nil? %>
     </div>
 
-    <div class="product-show">
-      <h2><%= @gearproduct.name %></h2>
-      <p>
-        <strong>Description:</strong>
-      <br>
-        <%= @gearproduct.description %>
-      </p>
-      <p>
-        <strong>Gear Type:</strong>
-        <br>
-        <%= @gearproduct.gear_type %>
-      </p>
+    <div class="product-show col-4">
+      <div>
+        <p><strong>Description:</strong> <%= @gearproduct.description %></p>
+      </div>
+      <div>
+        <p><strong>Gear Type:</strong> <%= @gearproduct.gear_type %></p>
+      </div>
     </div>
   </div>
 
-  <div class="product-edit-back-show">
-    <button class="back-button"><%= link_to 'Back', gearproducts_path %></button>
-    <button class="edit-product-button"><%= link_to 'Edit', edit_gearproduct_path(@gearproduct) %></button>
+  <div class="product-edit-back-show row">
+    <div class="col-12">
+      <button class="back-button"><%= link_to 'Back', gearproducts_path %></button>
+      <button class="edit-product-button"><%= link_to 'Edit', edit_gearproduct_path(@gearproduct) %></button>
+    </div>
   </div>
-
-</div>

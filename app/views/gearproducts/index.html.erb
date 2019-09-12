@@ -1,14 +1,14 @@
-<div class="container-fluid gearproducts-overview">
-  <h1>Gear</h1>
+<div class="container-fluid">
   <div>
+    <h1>Gear</h1>
     <h2>Find the Perfect Gear for your next Bike Trip</h2>
     <h3>We offer a variety of Jerseys, Helmets and much more! <br />Find all our gear below!</h3>
     <button class="new-product-button"><%= link_to 'New Gearproduct', new_gearproduct_path %></button>
-    <div class="row">
+  </div>
+    <div class="row products-overview">
       <!-- wenn collection oder @products für Partial genutzt nicht noch Loop benötigt!-->
       <%= render partial: "gearproduct", collection: @gearproducts %>
     </div><!--end row-->
-  </div>
 </div>
 
 
