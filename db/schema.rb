@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_09_195824) do
+ActiveRecord::Schema.define(version: 2019_09_12_145419) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
-    t.text "comment"
+    t.text "comment_body"
     t.text "comment_title"
     t.integer "star_rating"
     t.integer "product_id"

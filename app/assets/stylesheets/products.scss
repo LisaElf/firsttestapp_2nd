@@ -154,6 +154,15 @@ h2>a {
   font-weight: bolder;
 }
 
+.form-user-comment {
+  clear: all;
+  width: 100%;
+}
+
+.form-user-comment textarea {
+  height: fit-content;
+}
+
 //NEW BIKE PRODUCT FORM
 .form-group label {
   font-size: 14px;

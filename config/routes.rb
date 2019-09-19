@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   resources :users
   get 'simple_pages/service'
   resources :gearproducts
-  resources :products
+  resources :products do
+    resources :comments
+  end
   get 'simple_pages/about'
   get 'simple_pages/contact'
   get 'simple_pages/index'
@@ -12,4 +14,5 @@ Rails.application.routes.draw do
   root 'simple_pages#index'
 
   resources :orders, only: [:index, :show, :create, :new, :destroy]
+
 end
