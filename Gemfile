@@ -65,3 +65,6 @@ gem 'devise'
 
 #for user authorization functions
 gem 'cancancan', '~>1.10'
+
+#for pagination
+gem 'will_paginate', '~> 3.1.1'

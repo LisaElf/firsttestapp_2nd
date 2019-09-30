@@ -25,6 +25,7 @@
   <div class="user-comments row">
     <%= render 'new_comment' %>
     <%= render 'comments' %>
+    <%= will_paginate @comments, class: 'pagination-style' %>
   </div>
 
 
@@ -34,5 +35,3 @@
       <button class="edit-product-button"><%= link_to 'Edit', edit_product_path(@product) %></button>
     </div>
   </div>
-
-</div>

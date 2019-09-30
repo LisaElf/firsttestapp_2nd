@@ -167,6 +167,39 @@ h2>a {
   width: 100%;
 }
 
+//pagination
+.pagination-style {
+  width: 100%;
+  text-align: center;
+  padding: 0.3em;
+  cursor: default;
+}
+
+.pagination-style a, .pagination-style span, .pagination-style em {
+  padding: 0.2em 0.5em;
+}
+
+.pagination-style .disabled {
+  color: #aaaaaa;
+}
+
+.pagination-style .current {
+  font-style: normal;
+  font-weight: bold;
+  color: #506E73;
+}
+
+.pagination-style a {
+  border: 1px solid #dddddd;
+  color: #505E73;
+  text-decoration: none;
+}
+
+.pagination-style a:hover, .pagination-style a:focus {
+  border-color: #003366;
+  background: #505E73;
+  color: white;
+}
 
 //NEW BIKE PRODUCT FORM
 .form-group label {
