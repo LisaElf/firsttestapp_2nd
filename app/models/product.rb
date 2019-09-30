@@ -18,4 +18,8 @@ class Product < ApplicationRecord
     comments.star_rating_ascending.first
   end
 
+  def average_rating
+    comments.average(:star_rating).to_f
+  end
+
 end

@@ -1,10 +1,10 @@
-<div class="product-reviews">
+<div class="product-reviews col-12">
     <% @comments.each do |comment| %>
         <div class="row">
-            <hr>
+            <hr style="border-top: solid #ced4da 1px; height:1px; width: 100%;">
             <p><%= comment.user.first_name %> <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small></p>
-            <p><%= "Rating: #{comment.star_rating}/5" %></p>
-            <p><%= comment.comment_title %></p>
+            <div class="star-rated" data-score="<%=comment.star_rating%>"></div>
+            <p><strong><%= comment.comment_title %></strong></p>
             <p><%= comment.comment_body %></p>
         </div>
     <% end %>
