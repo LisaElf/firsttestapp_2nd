@@ -2,10 +2,15 @@
     <% @comments.each do |comment| %>
         <div class="row">
             <hr style="border-top: solid #ced4da 1px; height:1px; width: 100%;">
-            <p><%= comment.user.first_name %> <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small></p>
+            <p><%= comment.user.first_name %> <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small>
+              <% if signed_in? && current_user.admin? %>
+                <%= link_to ('<i class="fa fa-trash"></i>').html_safe, product_comment_path(comment.product, comment), method: :delete, data: { confirm: 'Are you sure?' }%>
+              <% end %>
+            </p>
             <div class="star-rated" data-score="<%=comment.star_rating%>"></div>
             <p><strong><%= comment.comment_title %></strong></p>
             <p><%= comment.comment_body %></p>
         </div>
+
     <% end %>
 </div>

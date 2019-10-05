@@ -32,6 +32,8 @@
   <div class="product-edit-back-show row">
     <div class="col-12">
       <button class="back-button"><%= link_to 'Back', products_path %></button>
-      <button class="edit-product-button"><%= link_to 'Edit', edit_product_path(@product) %></button>
+      <% if signed_in? && current_user.admin? %>
+        <button class="edit-product-button"><%= link_to 'Edit', edit_product_path(@product) %></button>
+      <% end %>
     </div>
   </div>

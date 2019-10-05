@@ -68,3 +68,6 @@ gem 'cancancan', '~>1.10'
 
 #for pagination
 gem 'will_paginate', '~> 3.1.1'
+
+#Font Awesome
+gem 'font-awesome-rails'
