@@ -1,9 +1,10 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!
   load_and_authorize_resource
 
   def create
     @product = Product.find(params[:product_id])
-    @comment = @product.comments.new(comments_params)
+    @comment = @product.comments.new(comment_params)
     @comment.user = current_user
 
 
@@ -26,7 +27,7 @@ class CommentsController < ApplicationController
   end
 
   private
-  def comments_params
+  def comment_params
     params.require(:comment).permit(:user_id, :comment_body, :comment_title, :star_rating)
   end
 end
