@@ -20,7 +20,8 @@
           <li id="first-item"><%= link_to "Home", root_path %></li>
           <li><%= link_to "About", simple_pages_about_path %></li>
           <li><%= link_to "Contact", simple_pages_contact_path %></li>
-          <div class="dropdown">
+          <li>
+            <div class="dropdown">
             <button class="dropdown-button">Products
             </button>
             <div class="dropdown-content">
@@ -29,6 +30,7 @@
               <%= link_to "Services", simple_pages_service_path %>
             </div>
           </div>
+          </li>
           <li><%= link_to "Orders", orders_path %></li>
           <% if user_signed_in? %>
           <li class="login-logout">
@@ -41,7 +43,6 @@
           <% end %>
           <li id="nav-search-form" class="search-form">
             <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
-            <%= form.label :q, 'Search for:', class:"search-label" %>
             <%= form.text_field :q, id: 'q', value: params[:q], class:"form-control-sm search-field" %>
             <%= form.submit 'Search', class:"search-submit" %>
             <% end %>
