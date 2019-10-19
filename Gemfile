@@ -72,3 +72,6 @@ gem 'will_paginate', '~> 3.1.1'
 
 #Font Awesome
 gem 'font-awesome-rails'
+
+#Functional testing
+gem 'rails-controller-testing'
