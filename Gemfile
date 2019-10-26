@@ -76,3 +76,6 @@ gem 'font-awesome-rails'
 
 #Functional testing
 gem 'rails-controller-testing'
+
+#Stripe gem
+gem 'stripe'
