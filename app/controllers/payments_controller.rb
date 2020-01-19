@@ -11,7 +11,8 @@ class PaymentsController < ApplicationController
         amount:  100* @product.price,
         currency: "usd",
         source: token,
-        description: params[:stripeEmail]
+        description: @product.name,
+        receipt_email: params[:stripeEmail]
       )
       if charge.paid
         Order.create(
@@ -27,7 +28,7 @@ class PaymentsController < ApplicationController
       flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
 
     end
-    redirect_to products_path
+
   end
 
   def update

@@ -1,3 +1,23 @@
-<h1>
-  Thank you!
-</h1>
+<div class="order-confirmation row">
+  <h1 class="col-12">
+    Thank you!
+  </h1>
+  <div class="order-confirmation-text col-4">
+      <h2>
+        We received your order and sent you a confirmation e-mail. Your products will be with you shortly!
+      </h2>
+      <h3>
+        Check out our other products here:
+      </h3>
+      <div class="product-edit-back-show row" style="text-align: center;">
+        <button class="back-button"><%= link_to 'Products', products_path %></button>
+      </div>
+  </div>
+
+  <div class="ordered-product product-image col-8">
+    <h3>Your order:</h3>
+    <br>
+    <%= image_tag(@product.image_url, class:"img-fluid") unless
+    @product.image_url.nil? %>
+  </div>
+</div>
