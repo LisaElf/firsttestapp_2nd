@@ -6,28 +6,28 @@ class PaymentsController < ApplicationController
     @user = current_user
 
     #Create a charge
-    begin
-      charge = Stripe::Charge.create(
-        amount:  100* @product.price,
-        currency: "usd",
-        source: token,
-        description: @product.name,
-        receipt_email: params[:stripeEmail]
-      )
-      if charge.paid
-        Order.create(
-          product_id: @product.id,
-          user_id: @user.id,
-          total: @product.price
+      begin
+        charge = Stripe::Charge.create(
+          amount:  100* @product.price,
+          currency: "usd",
+          source: token,
+          description: @product.name,
+          receipt_email: params[:stripeEmail]
         )
-      end
-    rescue Stripe::CardError => e
-      #The Card has been declined
-      body = e.json_body
-      err = body[:error]
-      flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
+        if charge.paid
+          Order.create(
+            product_id: @product.id,
+            user_id: @user.id,
+            total: @product.price
+          )
+        end
+      rescue Stripe::CardError => e
+        #The Card has been declined
+        body = e.json_body
+        err = body[:error]
+        flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
 
-    end
+      end
 
   end
 
