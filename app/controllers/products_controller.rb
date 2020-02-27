@@ -5,12 +5,14 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    byebug
+    if !Rails.env.production?
+      byebug
+    end
     if params[:q]
       search_term = params[:q]
       @products = Product.search(search_term)
     else
-    @products = Product.all
+      @products = Product.all
     end
 
   end
@@ -23,7 +25,9 @@ class ProductsController < ApplicationController
 
   # GET /products/new
   def new
-    byebug
+    if !Rails.env.production?
+      byebug
+    end
     @product = Product.new
   end
 
