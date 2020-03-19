@@ -558,6 +558,17 @@ h1, h2, h3, footer {
   text-align: left;
 }
 
+//Button Top
+#scroll-up{
+  position: fixed;
+  bottom: 60px;
+  right: 80px;
+  border-radius: 8px;
+  padding: 8px;
+  border: none;
+  background: #505D73;
+}
+
 // FOOTER
 
 footer {

@@ -79,3 +79,6 @@ gem 'rails-controller-testing'
 
 #Stripe gem
 gem 'stripe'
+
+#brakeman gem
+gem 'brakeman'

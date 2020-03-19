@@ -2,7 +2,7 @@
   <div class="product-detail row">
 
     <div class="product-image col-6">
-      <%= image_tag(@product.image_url, class:"img-fluid") unless @product.image_url.nil? %>
+      <%= image_tag(@product.image_url, class:"img-fluid img-zoom", data_zoom_image: @product.image_url) unless @product.image_url.nil? %>
     </div>
 
     <div class="product-show col-4">
