@@ -3,7 +3,7 @@
     <h3>Add a Review here:</h3>
   </div>
   <div class="form-user-comment">
-    <%= form_for ([@product, @product.comments.build]) do |f|%>
+    <%= form_for([@product, @product.comments.build], remote: true) do |f| %>
       <div class="form-group">
         <%= f.label :comment_title, "Comment Headline" %>
         <%= f.text_field :comment_title, class:"form-control" %>
@@ -20,5 +20,6 @@
         <%= f.submit "Submit Your Review" %>
       </div>
     <% end %>
+    <p class="thanks-review" hidden>Thank you for your review!</p>
   </div>
 <% end %>
