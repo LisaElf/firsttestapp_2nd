@@ -2,23 +2,28 @@
   <div class="product-detail row">
 
     <div class="product-image col-6">
-      <%= image_tag(@product.image_url, class:"img-fluid img-zoom", data_zoom_image: @product.image_url) unless @product.image_url.nil? %>
+      <% cache @product.image_url do %>
+        <%= image_tag(@product.image_url, class:"img-fluid img-zoom", data_zoom_image: @product.image_url) unless @product.image_url.nil? %>
+      <% end %>
     </div>
 
     <div class="product-show col-4">
-      <div>
-        <p><strong>Description:</strong> <%= @product.description %></p>
-      </div>
-      <div>
-        <p><strong>Colour:</strong> <%= @product.colour %></p>
-      </div>
-      <div>
-        <p><strong>Price:</strong> $<%= @product.price %></p>
-      </div>
-      <div>
-        <p><strong>Average Rating:</strong></p>
-        <div id="average-rating" class="star-rated" data-score="<%= @product.average_rating %>"></div>
-      </div>
+      <% cache @product do %>
+        <div>
+          <p><strong>Description:</strong> <%= @product.description %></p>
+        </div>
+        <div>
+          <p><strong>Colour:</strong> <%= @product.colour %></p>
+        </div>
+        <div>
+          <p><strong>Price:</strong> $<%= @product.price %></p>
+        </div>
+        <div>
+          <p><strong>Average Rating:</strong></p>
+          <div id="average-rating" class="star-rated" data-score="<%= @product.average_rating %>"></div>
+        </div>
+      <% end %>
+
       <div class="checkout_button">
         <% if signed_in?%>
           <%= form_with(url: '/payments/create') do |form| %>

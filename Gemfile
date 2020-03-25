@@ -82,3 +82,6 @@ gem 'stripe'
 
 #brakeman gem
 gem 'brakeman'
+
+#Dalli gem for memchache
+gem 'dalli'

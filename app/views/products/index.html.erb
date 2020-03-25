@@ -46,6 +46,8 @@
   </div>
   <div class="row  products-overview">
     <!-- wenn collection oder @products für Partial genutzt nicht noch Loop benötigt!-->
-    <%= render partial: "product", collection: @products %>
+    <% cache (cache_key_for_products) do %>
+      <%= render partial: "product", collection: @products %>
+    <% end %>
   </div><!--end row-->
 </div>
