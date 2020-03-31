@@ -85,3 +85,9 @@ gem 'brakeman'
 
 #Dalli gem for memchache
 gem 'dalli'
+
+#Redis gem
+gem 'redis-rails'
+
+# Monitoring Tool New Relic
+gem 'newrelic_rpm'
