@@ -11,6 +11,10 @@ class SimplePagesController < ApplicationController
     @email = params[:email]
     @message = params[:message]
     UserMailer.contact_form(@email, @name, @message).deliver_now
+
+    respond_to do |format|
+      format.js
+    end
   end
 
 end
