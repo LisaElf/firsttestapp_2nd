@@ -8,9 +8,10 @@
     <p class="product-price">$ <%= product.price %></p>
     <p class="product-color">Colour: <%= product.colour %></p>
 
+<% end %>
+
     <% if signed_in? && current_user.admin? %>
     <button class="edit-product-button"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure? '} %></button>
     <% end %>
 
   </div>
-<% end %>

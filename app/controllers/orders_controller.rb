@@ -9,7 +9,7 @@ class OrdersController < ApplicationController
     end
 
   def index
-    @orders = Order.includes(:product).all
+    @orders = Order.includes(:product).order("id ASC").all
   end
 
   def show

@@ -13,6 +13,7 @@ class ProductsController < ApplicationController
       @products = Product.search(search_term)
     else
       @products = Product.all
+
     end
 
   end
@@ -20,7 +21,16 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    if signed_in?
+      @last_visited_product = $redis.get("last_visited_page:#{current_user.id}")
+      $redis.set("last_visited_page:#{current_user.id}", @product.id)
+      if @last_visited_product
+        @last = Product.find(@last_visited_product)
+      end
+    end
     @comments = @product.comments.order("created_at DESC").paginate(page: params[:page], per_page: 3)
+
+
   end
 
   # GET /products/new

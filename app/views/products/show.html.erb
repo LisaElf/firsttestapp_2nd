@@ -2,9 +2,7 @@
   <div class="product-detail row">
 
     <div class="product-image col-6">
-      <% cache @product.image_url do %>
         <%= image_tag(@product.image_url, class:"img-fluid img-zoom", data_zoom_image: @product.image_url) unless @product.image_url.nil? %>
-      <% end %>
     </div>
 
     <div class="product-show col-4">
@@ -76,11 +74,25 @@
     </div>
   </div>
 
-  <div class="user-comments row">
-    <%= render 'new_comment' %>
-    <%= render 'comments' %>
-    <%= will_paginate @comments, class: 'pagination-style' %>
-  </div>
+
+  <% if signed_in? %>
+    <%if @last && @last.id != @product.id %>
+    <div class="last-visited-product col-12">
+      <h3>Your last visited Product:</h3>
+      <div class="col-4">
+        <%= link_to image_tag(@last.image_url, class:"img-fluid"), @last unless @last.image_url.nil? %>
+      </div>
+      <p><%= link_to @last.name, @last %></p>
+    </div>
+    <% end %>
+  <% end %>
+
+    <div class="user-comments row">
+      <%= render 'new_comment' %>
+      <%= render 'comments' %>
+      <%= will_paginate @comments, class: 'pagination-style' %>
+    </div>
+
 
 
   <div class="product-edit-back-show row">
