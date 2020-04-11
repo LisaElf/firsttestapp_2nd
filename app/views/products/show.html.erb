@@ -1,5 +1,5 @@
   <h2><%= @product.name %></h2>
-  <div class="product-detail row">
+  <div class="product-detail row" data-product-id="<%= @product.id %>">
 
     <div class="product-image col-6">
         <%= image_tag(@product.image_url, class:"img-fluid img-zoom", data_zoom_image: @product.image_url) unless @product.image_url.nil? %>
@@ -16,11 +16,12 @@
         <div>
           <p><strong>Price:</strong> $<%= @product.price %></p>
         </div>
+      <% end %>
         <div>
           <p><strong>Average Rating:</strong></p>
           <div id="average-rating" class="star-rated" data-score="<%= @product.average_rating %>"></div>
         </div>
-      <% end %>
+
 
       <div class="checkout_button">
         <% if signed_in?%>

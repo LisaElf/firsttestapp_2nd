@@ -8,6 +8,8 @@ class Comment < ApplicationRecord
   validates :product, presence: true
   validates :star_rating, numericality: {only_integer: true}
 
+  after_create_commit {CommentUpdateJob.perform_later(self, self.user)}
+
   scope :star_rating_desc, -> {order(star_rating: :desc)}
   scope :star_rating_ascending, -> {order(star_rating: :asc)}
 end

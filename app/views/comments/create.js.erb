@@ -1,6 +1,2 @@
 $("#new_comment").hide();
 $(".thanks-review").removeAttr("hidden");
-
-$(".product-reviews").prepend("<%= j render @comment %>");
-
-$("#average-rating").data('score', "<%= @product.average_rating %>");
