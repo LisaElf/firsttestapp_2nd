@@ -15,7 +15,7 @@ describe Product do
   end
   context "a new product entry has no name" do
     it "returns an invalid product" do
-      @product= FactoryBot.build(:gearproduct, name: nil)
+      @product= FactoryBot.build(:product, name: nil)
       expect(@product).not_to be_valid
     end
   end

@@ -2,6 +2,10 @@ class CommentsController < ApplicationController
   before_action :authenticate_user!
   load_and_authorize_resource
 
+  rescue_from CanCan::AccessDenied do
+    redirect_to root_url, alert: 'Unfortunately, you are not allowed to acces this page.'
+  end
+
   def create
     @product = Product.find(params[:product_id])
     @comment = @product.comments.new(comment_params)

@@ -18,6 +18,6 @@
 //= require_tree .
 
 $(document).on('turbolinks:load',function(){
-  $("#alert").delay(400).fadeOut("slow");
-  $("#notice").delay(400).fadeOut("slow");
+  $("#alert").delay(800).fadeOut("slow");
+  $("#notice").delay(800).fadeOut("slow");
 });

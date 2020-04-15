@@ -12,7 +12,7 @@
         }
       });
 
-      // bei Click auf Button soll nach oben gescrollt werden
+      // scroll to top if button "up" is clicked
       button.on("click", function(){
         window.scrollTo({
           top: 0,

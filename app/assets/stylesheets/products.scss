@@ -2,11 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#notice {
+//PRODUCT INDEX PAGE
+#carouselExampleIndicators {
+  margin-top: 80px;
+  margin-bottom: 140px;
+}
+
+.carousel-inner {
+  width: 60%;
+  margin: 0 auto;
   text-align: center;
 }
 
-//PRODUCT INDEX PAGE
+.carousel-inner img {
+  width: 100%;
+}
+
 .carousel-control-prev-icon {
   height: 40px;
   width: 40px;
@@ -23,6 +34,21 @@
 
 .carousel-control-next-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23506E73' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-caption>h2{
+  text-align: center;
+  line-height: 125%;
+  color: #FFF;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.carousel-caption>p{
+  text-align: center;
+  line-height: 125%;
+  color: #FFF;
+  font-size: 24px;
 }
 
 .products-overview {
@@ -86,6 +112,11 @@ h2>a {
   padding: 15px;
 }
 
+.product-display > h2 p {
+  color: #2A293C;
+  text-align: left;
+}
+
 //PRODUCT SHOW PAGE
 .product-image {
   display: inline;
@@ -102,6 +133,7 @@ h2>a {
   font-weight: bolder;
 }
 
+/* Stripe Button */
 .stripe-button-el-remake {
   overflow: hidden;
   display: inline-block;
@@ -130,6 +162,7 @@ h2>a {
   background-image: linear-gradient(#7dc5ee,#008cdd 85%,#30a2e4);
 }
 
+/* Last visited product*/
 .last-visited-product div {
   margin: auto;
 }
@@ -138,8 +171,7 @@ h2>a {
   text-align: center;
 }
 
-/* Model */
-
+/* Modal */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */

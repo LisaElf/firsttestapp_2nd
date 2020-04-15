@@ -2,6 +2,10 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
 
+  rescue_from CanCan::AccessDenied do
+    redirect_to root_url, alert: 'Unfortunately, you are not allowed to acces this page.'
+  end
+
   # GET /products
   # GET /products.json
   def index

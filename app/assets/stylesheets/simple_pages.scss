@@ -15,10 +15,7 @@ html, body {
   position: relative;
 }
 
-#notice {
-  text-align: center;
-}
-
+#notice,
 #alert {
   text-align: center;
 }
@@ -115,16 +112,6 @@ nav ul li {
 .search-form {
   margin-left: auto;
   padding: 16px 0 16px 0;
-}
-
-#nav-search-form {
-}
-
-.search-form form {
-
-}
-
-.search-field {
 }
 
 .search-label {
@@ -465,37 +452,9 @@ textarea:focus {
   }
 }
 
-//Thank you - page
-.giphy-thank-you {
-  text-align: center;
-}
-
-.giphy-thank-you p {
-  width: 480px;
-  margin: 0 auto;
-  text-align: right;
-}
-
-
-
 //service
 .service p{
   display: inline;
-}
-
-#carouselExampleIndicators {
-  margin-top: 80px;
-  margin-bottom: 140px;
-}
-
-.carousel-inner {
-  width: 60%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.carousel-inner img {
-  width: 100%;
 }
 
 h1 {
@@ -535,26 +494,6 @@ h1, h2, h3, footer {
   text-align: center;
 }
 
-.carousel-caption>h2{
-  text-align: center;
-  line-height: 125%;
-  color: #FFF;
-  font-size: 32px;
-  font-weight: bold;
-}
-
-.carousel-caption>p{
-  text-align: center;
-  line-height: 125%;
-  color: #FFF;
-  font-size: 24px;
-}
-
-.product-display > h2 p {
-  color: #2A293C;
-  text-align: left;
-}
-
 //Button Top
 #scroll-up{
   position: fixed;
@@ -567,7 +506,6 @@ h1, h2, h3, footer {
 }
 
 // FOOTER
-
 footer {
   clear: both;
   position: relative;
